@@ -2,6 +2,8 @@
 
 Um sistema moderno de gestão de inventário construído com React 19 e Vite, oferecendo controle completo de produtos, marcas e movimentações de estoque.
 
+https://estoque-rouge-eight.vercel.app/
+
 ## ✨ Funcionalidades
 
 - **Gestão de Usuários**: Sistema de autenticação com diferentes níveis de acesso (Admin, Gerente, Operador)
