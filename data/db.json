@@ -1,0 +1,157 @@
+{
+  "marcas": [
+    {
+      "id": "e74c",
+      "nome": "Teste",
+      "data_cadastro": "2025-02-17",
+      "historico": [
+        {
+          "data": "2025-08-29T15:35:43.902Z",
+          "usuario": "Admin",
+          "alteracoes": {
+            "nome": ["Teste 1", "Teste"]
+          }
+        }
+      ]
+    },
+    {
+      "id": "40ed",
+      "nome": "Cobreq",
+      "data_cadastro": "2025-02-17",
+      "historico": [
+        {
+          "data": "2025-08-29T15:35:56.677Z",
+          "usuario": "Admin",
+          "alteracoes": {
+            "nome": ["Cobreq Novas", "Cobreq"]
+          }
+        }
+      ]
+    },
+    {
+      "id": "3b0f",
+      "nome": "Potenza",
+      "data_cadastro": "2025-02-17"
+    },
+    {
+      "id": "866e",
+      "nome": "Vedamotors - Gsket",
+      "data_cadastro": "2025-02-17"
+    },
+    {
+      "id": "2d25",
+      "nome": "cobreq",
+      "data_cadastro": "2025-02-28"
+    }
+  ],
+  "produtos": [
+    {
+      "id": "1",
+      "ean": "7891234567890",
+      "descricao": "Produto Principal",
+      "marca_id": "3b0f",
+      "estoque_minimo": 10,
+      "estoque_atual": 28,
+      "data_cadastro": "2025-08-29",
+      "ultima_movimentacao": "2025-08-29T14:23:47.938Z",
+      "ativo": true
+    },
+    {
+      "id": "1756475213325",
+      "ean": "1234567890123",
+      "descricao": "Produto Teste Movimentação",
+      "marca_id": "e74c",
+      "estoque_minimo": 4,
+      "estoque_atual": 15,
+      "data_cadastro": "2025-08-29",
+      "ultima_movimentacao": "2025-08-29T15:00:00.000Z",
+      "ativo": true
+    },
+    {
+      "id": "1756475400000",
+      "ean": "9876543210123",
+      "descricao": "Produto Zero Stock",
+      "marca_id": "2d25",
+      "estoque_minimo": 8,
+      "estoque_atual": 0,
+      "data_cadastro": "2025-08-29",
+      "ultima_movimentacao": null,
+      "ativo": true
+    }
+  ],
+  "movimentacoes": [
+    {
+      "id": "1",
+      "ean": "7891234567890",
+      "tipo": "ENTRADA",
+      "quantidade": 20,
+      "estoque_anterior": 5,
+      "estoque_novo": 25,
+      "data": "2025-08-29T10:30:00.000Z",
+      "usuario": "admin",
+      "observacoes": "Recebimento inicial",
+      "produto_descricao": "Produto Principal"
+    },
+    {
+      "id": "2",
+      "ean": "7891234567890",
+      "tipo": "SAIDA",
+      "quantidade": 3,
+      "estoque_anterior": 25,
+      "estoque_novo": 22,
+      "data": "2025-08-29T14:20:00.000Z",
+      "usuario": "vendedor1",
+      "observacoes": "Venda balcão",
+      "produto_descricao": "Produto Principal"
+    },
+    {
+      "id": "3",
+      "ean": "1234567890123",
+      "tipo": "INVENTARIO",
+      "quantidade": 15,
+      "estoque_anterior": 12,
+      "estoque_novo": 15,
+      "data": "2025-08-29T15:00:00.000Z",
+      "usuario": "admin",
+      "observacoes": "Contagem física mensal",
+      "produto_descricao": "Produto Teste Movimentação"
+    },
+    {
+      "id": "1756477427903",
+      "ean": "7891234567890",
+      "tipo": "ENTRADA",
+      "quantidade": 3,
+      "estoque_anterior": 25,
+      "estoque_novo": 28,
+      "data": "2025-08-29T14:23:47.903Z",
+      "usuario": "Admin",
+      "observacoes": null,
+      "produto_descricao": "Produto Principal"
+    }
+  ],
+  "users": [
+    {
+      "id": "1",
+      "name": "Admin",
+      "email": "admin@estoque.com",
+      "password": "admin123",
+      "role": "ADMIN",
+      "createdAt": "2023-10-30"
+    },
+    {
+      "id": "2",
+      "name": "Gerente",
+      "email": "gerente@estoque.com",
+      "password": "gerente123",
+      "role": "MANAGER",
+      "createdAt": "2023-10-30"
+    },
+    {
+      "name": "balcao",
+      "email": "balcao@estoque.com",
+      "role": "OPERATOR",
+      "id": "1756479973567",
+      "createdAt": "2025-08-29"
+    }
+  ]
+}
