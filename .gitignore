@@ -15,6 +15,11 @@ dist-ssr
 # Unused files folder
 inutilizar/
 
+# Vercel
+.vercel
+*.vercel.app
+.env*.local
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json

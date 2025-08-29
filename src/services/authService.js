@@ -1,11 +1,35 @@
 import API from "./api";
+import { staticAPI } from "./staticDataService";
 import bcrypt from "bcryptjs";
 import { getCurrentDateBR } from "../utils/dateUtils";
 
+// Helper to use static API when needed
+let useStaticAuth = false;
+
+const authCall = async (apiFunction, staticFunction) => {
+  if (useStaticAuth) {
+    return staticFunction();
+  }
+
+  try {
+    return await apiFunction();
+  } catch (error) {
+    console.warn(
+      "🚨 Auth API not available, switching to static data:",
+      error.message
+    );
+    useStaticAuth = true;
+    return staticFunction();
+  }
+};
+
 export const login = async (credentials) => {
   try {
-    // Get all users from JSON server
-    const response = await API.get("/users");
+    // Get all users using fallback system
+    const response = await authCall(
+      () => API.get("/users"),
+      () => staticAPI.getUsers()
+    );
     const users = response.data;
 
     // Find user by email
