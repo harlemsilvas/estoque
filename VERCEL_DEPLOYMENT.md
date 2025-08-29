@@ -141,8 +141,18 @@ After deployment:
    - Redeploy after adding variables
 
 4. **Static Data Not Loading**:
+
    - Check browser console for errors
    - Verify `VITE_USE_STATIC_DATA=true` is set
+
+5. **MIME Type Error (JavaScript modules)**:
+   ```
+   Failed to load module script: Expected a JavaScript-or-Wasm module script
+   but the server responded with a MIME type of "text/html"
+   ```
+   - This is fixed in the current `vercel.json` configuration
+   - If persists, clear Vercel cache and redeploy
+   - See `VERCEL_MIME_FIX.md` for detailed solution
 
 ### Debug Commands
 
