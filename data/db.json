@@ -9,7 +9,10 @@
           "data": "2025-08-29T15:35:43.902Z",
           "usuario": "Admin",
           "alteracoes": {
-            "nome": ["Teste 1", "Teste"]
+            "nome": [
+              "Teste 1",
+              "Teste"
+            ]
           }
         }
       ]
@@ -23,7 +26,10 @@
           "data": "2025-08-29T15:35:56.677Z",
           "usuario": "Admin",
           "alteracoes": {
-            "nome": ["Cobreq Novas", "Cobreq"]
+            "nome": [
+              "Cobreq Novas",
+              "Cobreq"
+            ]
           }
         }
       ]
@@ -51,9 +57,9 @@
       "descricao": "Produto Principal",
       "marca_id": "3b0f",
       "estoque_minimo": 10,
-      "estoque_atual": 28,
+      "estoque_atual": 33,
       "data_cadastro": "2025-08-29",
-      "ultima_movimentacao": "2025-08-29T14:23:47.938Z",
+      "ultima_movimentacao": "2026-01-22T01:19:42.618Z",
       "ativo": true
     },
     {
@@ -124,6 +130,18 @@
       "estoque_anterior": 25,
       "estoque_novo": 28,
       "data": "2025-08-29T14:23:47.903Z",
+      "usuario": "Admin",
+      "observacoes": null,
+      "produto_descricao": "Produto Principal"
+    },
+    {
+      "id": "1769044782563",
+      "ean": "7891234567890",
+      "tipo": "ENTRADA",
+      "quantidade": 5,
+      "estoque_anterior": 28,
+      "estoque_novo": 33,
+      "data": "2026-01-22T01:19:42.563Z",
       "usuario": "Admin",
       "observacoes": null,
       "produto_descricao": "Produto Principal"

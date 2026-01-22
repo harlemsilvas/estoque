@@ -198,6 +198,67 @@ body {
   border-radius: var(--radius);
 }
 
+/* Login Container na HomePage */
+.login-container {
+  max-width: 400px;
+  margin: 2rem auto;
+  text-align: center;
+}
+
+.login-container h1 {
+  color: var(--primary);
+  margin-bottom: 0.5rem;
+}
+
+.login-container p {
+  color: var(--text-secondary);
+  margin-bottom: 2rem;
+}
+
+.auth-links {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid #e2e8f0;
+}
+
+.auth-links a {
+  color: var(--primary);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.auth-links a:hover {
+  text-decoration: underline;
+}
+
+/* Dashboard Styles */
+.dashboard-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.stat-card {
+  background: var(--surface);
+  padding: 1.5rem;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-md);
+  text-align: center;
+  border-left: 4px solid var(--primary);
+}
+
+.stat-card h3 {
+  color: var(--primary);
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+}
+
+.stat-card p {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
+
 /* Componentes comuns */
 .table-responsive {
   overflow-x: auto;

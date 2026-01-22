@@ -66,13 +66,22 @@ function App() {
       <Routes>
         <Route path="/login" element={<Login />} />
         <Route path="/registrar" element={<Register />} />
-        <Route path="/usuarios/novo" element={<Register />} />
         <Route path="/" element={<HomePage />} />
+
+        {/* Protected Routes - All require authentication */}
         <Route
           path="/usuarios"
           element={
             <PrivateRoute roles={["ADMIN"]}>
               <UsersPage />
+            </PrivateRoute>
+          }
+        />
+        <Route
+          path="/usuarios/novo"
+          element={
+            <PrivateRoute roles={["ADMIN"]}>
+              <Register />
             </PrivateRoute>
           }
         />
@@ -87,21 +96,83 @@ function App() {
         <Route
           path="/produtos"
           element={
-            <PrivateRoute roles={["ADMIN", "MANAGER"]}>
+            <PrivateRoute roles={["ADMIN", "MANAGER", "OPERATOR"]}>
               <ProductsPage />
             </PrivateRoute>
           }
         />
-        <Route path="/marcas" element={<BrandsPage />} />
-        <Route path="/movimentacao" element={<MovementPage />} />
-        <Route path="/sobre" element={<AboutPage />} />
-        <Route path="/produtos/editar/:id" element={<EditProductForm />} />
-        <Route path="/marcas/editar/:id" element={<EditBrandForm />} />
-        <Route path="/produtos/historico/:id" element={<ProductHistory />} />
-        <Route path="/marcas/historico/:id" element={<BrandHistory />} />
-        <Route path="/movimentacoes" element={<MovementsList />} />
-        <Route path="/controle-inventario" element={<InventoryControl />} />
-        <Route path="/produtos/historico/:id" element={<ProductHistory />} />
+        <Route
+          path="/produtos/editar/:id"
+          element={
+            <PrivateRoute roles={["ADMIN", "MANAGER"]}>
+              <EditProductForm />
+            </PrivateRoute>
+          }
+        />
+        <Route
+          path="/produtos/historico/:id"
+          element={
+            <PrivateRoute>
+              <ProductHistory />
+            </PrivateRoute>
+          }
+        />
+        <Route
+          path="/marcas"
+          element={
+            <PrivateRoute roles={["ADMIN", "MANAGER", "OPERATOR"]}>
+              <BrandsPage />
+            </PrivateRoute>
+          }
+        />
+        <Route
+          path="/marcas/editar/:id"
+          element={
+            <PrivateRoute roles={["ADMIN", "MANAGER"]}>
+              <EditBrandForm />
+            </PrivateRoute>
+          }
+        />
+        <Route
+          path="/marcas/historico/:id"
+          element={
+            <PrivateRoute>
+              <BrandHistory />
+            </PrivateRoute>
+          }
+        />
+        <Route
+          path="/movimentacao"
+          element={
+            <PrivateRoute roles={["ADMIN", "MANAGER", "OPERATOR"]}>
+              <MovementPage />
+            </PrivateRoute>
+          }
+        />
+        <Route
+          path="/movimentacoes"
+          element={
+            <PrivateRoute>
+              <MovementsList />
+            </PrivateRoute>
+          }
+        />
+        <Route
+          path="/controle-inventario"
+          element={
+            <PrivateRoute roles={["ADMIN", "MANAGER"]}>
+              <InventoryControl />
+            </PrivateRoute>
+          }
+        />
+        <Route
+          path="/sobre"
+          element={
+            <PrivateRoute>
+              <AboutPage />
+            </PrivateRoute>
+          }
+        />
       </Routes>
     </div>
   );

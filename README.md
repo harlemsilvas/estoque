@@ -1,4 +1,4 @@
-# 📦 Sistema de Controle de Estoque
+# 📦 Sistema de Controle de Estoque - 21-1-2026 - ultima compilação
 
 Um sistema moderno de gestão de inventário construído com React 19 e Vite, oferecendo controle completo de produtos, marcas e movimentações de estoque.
 
@@ -26,7 +26,6 @@ https://estoque-rouge-eight.vercel.app/
    ```
 
 2. **Configure as variáveis de ambiente** no dashboard da Vercel:
-
    - `VITE_API_URL`: URL da sua API de produção
 
 3. **Deploy automático**: Toda push para a branch main fará deploy automático
